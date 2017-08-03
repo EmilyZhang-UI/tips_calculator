@@ -18,6 +18,9 @@ function createTipsOptionsButtons(tip){
 function createTip(tip) {
     var prices = document.getElementById("show_prices");
     var initial_price = document.getElementById("initial_price").value;
+    if(initial_price == ""){
+      initial_price = 0;
+    }
     var calculate_tip = initial_price*(tip/100);
     var finial_price = parseFloat(initial_price) + parseFloat(calculate_tip);
     var str_prices = "<label>您的初始价格：</label><div>"+initial_price+"</div>"
