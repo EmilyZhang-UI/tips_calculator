@@ -36,6 +36,6 @@ function setTwoNumberDecimal(event) {
     n = event.target.value;
     n = (n + "").split(".");
     if(n[1] && n[1].length > 2){
-      event.target.value = parseFloat(event.target.value).toFixed(2);
+      event.target.value = n[0]+"."+n[1].substring(0,2);
     }
 }
