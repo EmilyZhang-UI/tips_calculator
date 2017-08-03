@@ -12,7 +12,7 @@
       <label>设置小费比例：</label><input id="tips_array" class="form-control input-lg" type="text">
       <button id="create_tip_button" type="button" class="btn btn-success" onclick="createTipsOptions()">生成小费选项</button>
       <div id="tips_options_buttons"></div>
-      <label>输入价格：</label><input id="initial_price" class="form-control input-lg" type="number" value="0">
+      <label>输入价格：</label><input id="initial_price" step="0.01" oninput="setTwoNumberDecimal(event)" min="0" class="form-control input-lg" type="number" value="0.00">
       <div id="show_prices"></div>
     </div>
   </body>
